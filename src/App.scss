@@ -1,0 +1,114 @@
+@import "styles/base.scss";
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: map-get($color, "cream");
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  .container{
+    display: flex;
+    width: 85vh;
+    height: 70vh;
+    border-radius: 10px;
+    background-color: map-get($color, "green");
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-size: calc(10px + 2vmin);
+    
+    padding-top: 4vh;
+
+
+    .header{
+      font-size: 32px;
+      color: white;
+      font-weight: bold;
+      font-family: 'Poppins';
+      margin-bottom: 10vh;
+    }
+
+    .name{
+      width: 60vh;
+    }
+
+    .age{
+      width: 15vh;
+      margin-right: 2vh;
+    }
+    .weight{
+      width: 15vh;
+      
+    }
+    .height{
+      width: 15vh;
+    }
+    .unit{
+      display: flex;
+      color: map-get($color, "broken-white");
+      font-size: 18px;
+      align-self: center;
+    }
+  }
+
+  .baris{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: start;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  label{
+    display: flex;
+    color: map-get($color , "broken-white");
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  form{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  input{
+    display: flex;
+    background-color: #F4F4F4;
+    color: map-get($color , "brown");
+    border: 2px solid #F4F4F4F4;
+    border-radius: 5px;
+    height: 5vh;
+    width: 60vh;
+    padding-left: 10px;
+    margin-bottom: 1vh;
+    font-size: 18px;
+    font-family: 'Poppins';
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  
+}
+

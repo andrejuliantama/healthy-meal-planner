@@ -1,0 +1,18 @@
+$color: (
+  "cream": #F7D1BA,
+  "broken-white": #F4F4F4,
+  "green": #557571,
+  "brown": #D49A89,
+  "black": #0A0A0B,
+  "white": #f5f5f4,
+  "gray-1": #333333,
+  "gray-2": #4F4F4F,
+  "gray-3": #828282,
+  "gray-4": #BDBDBD,
+);
+
+$color-border-default: map-get($color, "gray-4");
+$color-text-base-default: map-get($color, "gray-4");
+$color-title-default: map-get($color, "white");
+$color-header-default: $color-title-default;
+$color-background-default: map-get($color, "cream");

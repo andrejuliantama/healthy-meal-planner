@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import Zoom from 'react-reveal/Zoom';
 
-
 const Home = () =>{
   const [gender, setGender] = useState("Male");
   const [activity, setActitivy] = useState("Low");
@@ -27,6 +26,7 @@ const Home = () =>{
     const handleChange = (event) => {
       setSelectedValue(event.target.value);
     };
+
     return (
       <div className="Home">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
@@ -37,7 +37,9 @@ const Home = () =>{
             </div>
             <form>
               <label>Name</label>
-              <input className="name" type="text"/>
+              <input className="name" type="text" 
+                placeholder="Your Name" 
+                />
               <div className="baris">
                 <div className="column">
                   <label>Age</label>

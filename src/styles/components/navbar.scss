@@ -1,0 +1,26 @@
+@import "../base.scss";
+
+.navbar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    justify-content: left;
+    align-items: center;
+    background-color: map-get($color , "green" );
+
+    span{
+        color: map-get($color , "broken-white" );
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 3vmin;
+        font-weight: bold;
+        font-family: 'Poppins';
+        border: 0;
+    }
+
+    .span:focus{
+        text-decoration: none;
+    }
+
+}

@@ -10,6 +10,8 @@ import {
 //Import Route Classes
 import Home from "./pages/home.js";
 import Result from "./pages/result.js";
+import Calorie from "./pages/calorie.js";
+import Meal from "./pages/meal.js";
 
 
 class App extends Component{
@@ -19,6 +21,8 @@ class App extends Component{
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/result" component={Result}/>
+          <Route exact path="/calorie-plan" component={Calorie}/>
+          <Route exact path="/meal-recommendation" component={Meal}/>
         </Switch> 
       </BrowserRouter>
     );

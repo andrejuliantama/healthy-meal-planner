@@ -1,5 +1,5 @@
 import '../styles/pages/home.scss';
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import { NavBar }from '../components/navbar.js';
 import { withStyles } from '@material-ui/core/styles';
 import { Radio } from "../components/radio.js";
@@ -8,9 +8,24 @@ import {
 } from "react-router-dom";
 import Zoom from 'react-reveal/Zoom';
 
+window.$sesi = new Array();
+
+
 const Home = () =>{
   const [gender, setGender] = useState("");
   const [activity, setActitivy] = useState("");
+  const sesi = window.$sesi;
+
+  function handleChange(e) {
+    window.$sesi[e.target.name] = e.target.value;
+    console.log(e.target.name + " changed to "+e.target.value)
+  }
+
+  useEffect(() => {
+    window.$sesi['gender'] = gender;
+    window.$sesi['activity'] = activity;
+    console.log('Gender: '+window.$sesi['gender']+', activity: '+window.$sesi['activity'])  
+  });
 
   return (
     <div className="Home">
@@ -25,12 +40,12 @@ const Home = () =>{
           <form>
             <label>Name</label>
             <input className="name" type="text" 
-              placeholder="Your Name" 
+              placeholder="Your Name" name="name" onChange={handleChange}
               />
             <div className="baris">
               <div className="column mr-1">
                 <label>Age</label>
-                <input className="age" type="number"/>
+                <input className="age" type="number" name="age" onChange={handleChange}/>
               </div>
               <div className="column ml-5">
                 <label>Gender</label>
@@ -56,14 +71,14 @@ const Home = () =>{
               <div className="column mr-5">
                 <label>Weight</label>
                 <div className="baris">
-                  <input className="weight" type="number"/>
+                  <input className="weight" type="number" name="weight" onChange={handleChange}/>
                   <span className="ml-2 unit">Kg</span>
                 </div>
               </div>
               <div className="column">
                 <label>Height</label>
                 <div className="baris">
-                  <input className="height" type="number"/>
+                  <input className="height" type="number" name="height" onChange={handleChange}/>
                   <span className="ml-2 unit">Cm</span>
                 </div>
               </div>
@@ -73,7 +88,7 @@ const Home = () =>{
               <div className="column mr-5">
                 <label>Target</label>
                 <div className="baris">
-                  <input className="weight" type="number"/>
+                  <input className="weight" type="number" name="target" onChange={handleChange}/>
                   <span className="ml-2 unit">Kg</span>
                 </div>
               </div>

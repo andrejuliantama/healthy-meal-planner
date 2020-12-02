@@ -1,6 +1,6 @@
 import '../styles/pages/result.scss';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import { Radio } from "../components/radio.js";
 import {
   Link
@@ -10,6 +10,17 @@ import Zoom from 'react-reveal/Zoom';
 
 const Result = () =>{
   
+  const [current, setCurrent] = useState("");
+  const [target, setTarget] = useState("");
+  const [notice, setNotice] = useState(false);
+  useEffect(() => {
+    setCurrent((window.$sesi['weight'] / (window.$sesi['height']*window.$sesi['height']/10000)).toFixed(1));
+    setTarget((window.$sesi['target'] / (window.$sesi['height']*window.$sesi['height']/10000)).toFixed(1));
+    if(parseFloat(target) >= 25 || parseFloat(target) < 18.5 ) {
+      setNotice(true);
+    }
+  });
+
     return(
       <div className="result">
         <NavBar />
@@ -23,14 +34,14 @@ const Result = () =>{
             <div className="column">
               <span className="bmi">Current BMI</span>
               <div className="bmiNumCon">
-                <span className="bmiNum">15</span>
+                <span className="bmiNum">{current}</span>
               </div>
               
             </div>
             <div className="column">
               <span className="bmi">Target BMI</span>
               <div className="bmiNumCon">
-                <span className="bmiNum">20</span>
+                <span className="bmiNum" style={{color: notice ? "red" : ""}}>{target}</span>
               </div>
             </div>
           </div>

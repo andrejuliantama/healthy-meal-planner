@@ -40,6 +40,9 @@ const Calorie = () =>{
 
   });
 
+  function handleClick(durasi) {
+    window.$sesi['durasi'] = durasi;
+  }
 
     return(
       <div className="result">
@@ -64,7 +67,7 @@ const Calorie = () =>{
 
 
           <div className="baris justify-content-center">
-           <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+           <Link to="/meal-recommendation" onClick={() => handleClick(30)} style={{ textDecoration: 'none' }}>
               <div className="column align-items-center zoom">
                 <span className="days">For 30 Days</span>
                 <div className="calorieCon">
@@ -73,7 +76,7 @@ const Calorie = () =>{
                 </div>
               </div>
             </Link>
-            <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+            <Link to="/meal-recommendation" onClick={() => handleClick(60)} style={{ textDecoration: 'none' }}>
               <div className="column align-items-center zoom">
                 <span className="days">For 60 Days</span>
                 <div className="calorieCon">
@@ -85,7 +88,7 @@ const Calorie = () =>{
           </div>
           
           <div className="baris justify-content-center">
-            <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+            <Link to="/meal-recommendation" onClick={() => handleClick(90)} style={{ textDecoration: 'none' }}>
             <div className="column align-items-center zoom">
                 <span className="days">For 90 Days</span>
                 <div className="calorieCon">
@@ -94,7 +97,7 @@ const Calorie = () =>{
                 </div>
               </div>
             </Link>
-            <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+            <Link to="/meal-recommendation" onClick={() => handleClick(180)} style={{ textDecoration: 'none' }}>
               <div className="column align-items-center zoom">
                 <span className="days">For 180 Days</span>
                 <div className="calorieCon">
@@ -107,9 +110,9 @@ const Calorie = () =>{
           </div>
           
           <div className="baris mt-4 justify-content-center">
-            <Link to="/meal-recommendation">
+            { /*<Link to="/meal-recommendation">
               <button ><i>Next</i></button>
-            </Link>
+            </Link> */ }
           </div>
         </div>
       </Zoom>

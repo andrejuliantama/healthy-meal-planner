@@ -24,16 +24,16 @@ const Meal = () =>{
           <div className="baris justify-content-center">
             <div className="column align-items-center">
               <div className="mealCon">
-                <span className="text">Burger</span>
-                <img src="/assets/burger.jpg"/>
-                <span className="text">230 Calories</span>
+                <span className="text">Salad</span>
+                <img src="/assets/salad.jpg"/>
+                <span className="text">108 Calories</span>
               </div>
             </div>
             <div className="column align-items-center">
               <div className="mealCon">
                 <span className="text">Burger</span>
                 <img src="/assets/burger.jpg"/>
-                <span className="text">230 Calories</span>
+                <span className="text">354 Calories</span>
               </div>
             </div>
           </div>
@@ -41,16 +41,16 @@ const Meal = () =>{
           <div className="baris justify-content-center">
           <div className="column align-items-center">
               <div className="mealCon">
-                <span className="text">Burger</span>
-                <img src="/assets/burger.jpg"/>
-                <span className="text">230 Calories</span>
+                <span className="text">Water</span>
+                <img src="/assets/water.jpg"/>
+                <span className="text">0 Calories</span>
               </div>
             </div>
             <div className="column align-items-center">
               <div className="mealCon">
-                <span className="text">Burger</span>
-                <img src="/assets/burger.jpg"/>
-                <span className="text">230 Calories</span>
+                <span className="text">Orange Juice</span>
+                <img src="/assets/orange.jpg"/>
+                <span className="text">45 Calories</span>
               </div>
             </div>
           </div>

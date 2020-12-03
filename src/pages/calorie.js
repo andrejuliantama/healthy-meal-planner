@@ -64,36 +64,46 @@ const Calorie = () =>{
 
 
           <div className="baris justify-content-center">
-            <div className="column align-items-center zoom">
-              <span className="days">For 30 Days</span>
-              <div className="calorieCon">
-                <span className="calories" style={{color: parseFloat(thirtyday) < 1000 ? "red" : ""}}>{thirtyday}</span>
-                <span className="calories">Calories</span>
+           <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+              <div className="column align-items-center zoom">
+                <span className="days">For 30 Days</span>
+                <div className="calorieCon">
+                  <span className="calories" style={{color: parseFloat(thirtyday) < 1000 ? "red" : ""}}>{thirtyday}</span>
+                  <span className="calories">Calories</span>
+                </div>
               </div>
-            </div>
-            <div className="column align-items-center zoom">
-              <span className="days">For 60 Days</span>
-              <div className="calorieCon">
-                <span className="calories" style={{color: parseFloat(sixtyday) < 1000 ? "red" : ""}}>{sixtyday}</span>
-                <span className="calories">Calories</span>
+            </Link>
+            <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+              <div className="column align-items-center zoom">
+                <span className="days">For 60 Days</span>
+                <div className="calorieCon">
+                  <span className="calories" style={{color: parseFloat(sixtyday) < 1000 ? "red" : ""}}>{sixtyday}</span>
+                  <span className="calories">Calories</span>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
+          
           <div className="baris justify-content-center">
+            <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
             <div className="column align-items-center zoom">
-              <span className="days">For 90 Days</span>
-              <div className="calorieCon">
-                <span className="calories" style={{color: parseFloat(ninetyday) < 1000 ? "red" : ""}}>{ninetyday}</span>
-                <span className="calories">Calories</span>
+                <span className="days">For 90 Days</span>
+                <div className="calorieCon">
+                  <span className="calories" style={{color: parseFloat(ninetyday) < 1000 ? "red" : ""}}>{ninetyday}</span>
+                  <span className="calories">Calories</span>
+                </div>
               </div>
-            </div>
-            <div className="column align-items-center zoom">
-              <span className="days">For 180 Days</span>
-              <div className="calorieCon">
-                <span className="calories" style={{color: parseFloat(oneeightyday) < 1000 ? "red" : ""}}>{oneeightyday}</span>
-                <span className="calories">Calories</span>
+            </Link>
+            <Link to="/meal-recommendation" style={{ textDecoration: 'none' }}>
+              <div className="column align-items-center zoom">
+                <span className="days">For 180 Days</span>
+                <div className="calorieCon">
+                  <span className="calories" style={{color: parseFloat(oneeightyday) < 1000 ? "red" : ""}}>{oneeightyday}</span>
+                  <span className="calories">Calories</span>
+                </div>
               </div>
-            </div>
+            </Link>
+            
           </div>
           
           <div className="baris mt-4 justify-content-center">
